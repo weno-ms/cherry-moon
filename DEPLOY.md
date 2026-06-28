@@ -4,9 +4,9 @@
 
 - **リポジトリ**: https://github.com/weno-ms/cherry-moon （public）
 - **仮URL（公開中）**: https://weno-ms.github.io/cherry-moon/
-- **本番URL（DNS設定後）**: https://cherry-m00n.com
+- **本番URL（DNS設定後）**: https://cherr-y-moon.com
 - **ホスティング**: GitHub Pages（main ブランチ / ルート）
-- **独自ドメイン**: cherry-m00n.com（CNAMEファイル & Pages設定済み）
+- **独自ドメイン**: cherr-y-moon.com（CNAMEファイル & Pages設定済み）
 - **登録事業者**: お名前.com
 
 更新フロー: ローカルで編集 → `git add -A && git commit && git push` → 数十秒で自動反映。
@@ -17,7 +17,7 @@
 
 お名前.com の **［ドメイン Navi → DNS → DNSレコード設定を利用する → DNSレコード設定］** で以下を登録します。
 
-### 1. apex ドメイン（cherry-m00n.com）用 — A レコード 4件
+### 1. apex ドメイン（cherr-y-moon.com）用 — A レコード 4件
 
 | ホスト名 | TYPE | VALUE |
 |---------|------|-------|
@@ -47,9 +47,9 @@
 
 ## 反映後の確認
 
-1. `dig cherry-m00n.com +short` → 上記の185.199.x.xが返ればOK
+1. `dig cherr-y-moon.com +short` → 上記の185.199.x.xが返ればOK
 2. GitHub → リポジトリ Settings → Pages で「DNS check successful」表示を確認
 3. 同画面の **Enforce HTTPS** にチェック（証明書自動発行後に選択可）
-4. https://cherry-m00n.com にアクセスしてサイト表示を確認
+4. https://cherr-y-moon.com にアクセスしてサイト表示を確認
 
 DNS設定が終わったら教えてください。反映確認とHTTPS有効化までフォローします。

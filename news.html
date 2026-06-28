@@ -192,12 +192,12 @@
   <div class="stars"></div>
   <div class="frame">
     <header>
-      <a href="index.html" class="brand">
+      <a href="/" class="brand">
         <img class="logo-mini" src="logo_cut.png" alt="CHERRY MOON">
         <span class="orb brand-t">CHERRY MOON</span>
       </a>
       <nav>
-        <a href="index.html">HOME</a>
+        <a href="/">HOME</a>
         <a href="news.html" class="active">NEWS</a>
         <a href="profile.html">PROFILE</a>
         <a href="music.html">MUSIC</a>
@@ -265,7 +265,7 @@
   <button class="m-burger" id="mBurger" aria-label="メニューを開く"><span></span><span></span><span></span></button>
   <div class="m-drawer" id="mDrawer">
     <div class="m-drawer-in">
-      <a href="index.html">HOME</a>
+      <a href="/">HOME</a>
       <a href="news.html">NEWS</a>
       <a href="profile.html">PROFILE</a>
       <a href="music.html">MUSIC</a>
@@ -282,7 +282,7 @@
     </div>
   </div>
   <nav class="m-bottom">
-    <a href="index.html"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v9h5v-6h4v6h5v-9"/></svg>HOME</a>
+    <a href="/"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 10v9h5v-6h4v6h5v-9"/></svg>HOME</a>
     <a href="news.html"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>NEWS</a>
     <a href="live.html"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.2 5.7.8-4.1 4 1 5.7L12 21l-5.1 2.7 1-5.7-4.1-4 5.7-.8z"/></svg>LIVE</a>
     <a href="music.html"><svg viewBox="0 0 24 24"><path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="16" r="2"/></svg>MUSIC</a>
@@ -290,14 +290,14 @@
   </nav>
   <script>
   (function(){
-    var path=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-    if(!path)path='index.html';
+    var path=(location.pathname.split('/').pop()||"/").toLowerCase();
+    if(!path)path="/";
     var burger=document.getElementById('mBurger'),drawer=document.getElementById('mDrawer'),more=document.getElementById('mMore');
     function toggle(){var o=drawer.classList.toggle('open');burger.classList.toggle('on',o);document.body.classList.toggle('m-lock',o);}
     burger.addEventListener('click',toggle);
     more.addEventListener('click',toggle);
     drawer.addEventListener('click',function(e){if(e.target===drawer)toggle();});
-    var inBottom={'index.html':1,'news.html':1,'live.html':1,'music.html':1};
+    var inBottom={"/":1,'news.html':1,'live.html':1,'music.html':1};
     document.querySelectorAll('.m-drawer-in a').forEach(function(a){if(a.getAttribute('href')===path)a.classList.add('on');});
     document.querySelectorAll('.m-bottom a').forEach(function(a){if(a.getAttribute('href')===path)a.classList.add('on');});
     if(!inBottom[path])more.classList.add('on');

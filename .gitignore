@@ -1,0 +1,10 @@
+# Windows / WSL junk
+*:Zone.Identifier
+*Zone.Identifier
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+
+# Local working backups
+.*_backup.png
